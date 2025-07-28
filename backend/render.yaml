@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: deepfake-detector-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHONUNBUFFERED
+        value: 1
+    healthCheckPath: /
+    disk:
+      name: model-storage
+      mountPath: /app/models
+      sizeGB: 1 

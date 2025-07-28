@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+torch
+torchvision
+python-multipart
+Pillow
+av
+timm
+face_recognition
+dlib
+cmake
+typing_extensions
+opencv-python-headless
+fpdf2
+matplotlib
+gradio 
